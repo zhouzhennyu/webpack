@@ -11,23 +11,6 @@ module.exports = {
         filename: '[name].[contenthash].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
-    mode: 'development',
-    devtool: 'inline-source-map',
-    devServer: {
-        contentBase: './dist'
-    },
-    optimization: {
-        runtimeChunk: 'single',
-        splitChunks: {
-            cacheGroups: {
-                vendor: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name: 'vendors',
-                    chunks: 'all',
-                },
-            },
-        },
-    },
     module: {
         rules: [
             {
